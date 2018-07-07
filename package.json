@@ -1,0 +1,16 @@
+{
+  "name": "pushbraker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "preinstall": "cp support/git/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitea.tothsoft.hu/flowAcademy/pushbreaker.git"
+  },
+  "author": "László Tóth",
+  "license": "ISC"
+}
