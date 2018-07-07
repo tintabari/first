@@ -1,3 +1,3 @@
 # pushbraker
 
-This repository is the pushbraker example
+This repository is the pushbreaker example
