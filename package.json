@@ -1,11 +1,13 @@
 {
-  "name": "pushbraker",
+  "name": "FlowDemoApp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha \"./test/unit/*.js\"",
+    "test": "npm run test:unit && npm run test:web",
     "start": "node app/server.js",
+    "test:unit": "./node_modules/.bin/mocha \"./test/unit/*.js\"",
+    "test:web": "./node_modules/.bin/mocha \"./test/server/*.js\"",
     "preinstall": "cp support/git/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push"
   },
   "repository": {
