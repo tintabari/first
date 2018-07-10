@@ -1,5 +1,10 @@
-var expect  = require("chai").expect;
+var chai  = require("chai");
+const chaiHttp = require('chai-http');
 var request = require("request");
+var app = require("../../app/server");
+chai.use(chaiHttp);
+
+const chaiRequest = chai.request(app);
 
 describe("Color Code Converter API", function() {
 
@@ -9,18 +14,18 @@ describe("Color Code Converter API", function() {
   
       it("returns status 200", function(done) {
         request(url, function(error, response, body) {
-          expect(response.statusCode).to.equal(200);
+          chai.expect(response.statusCode).to.equal(200);
           done();
         });
       });
   
       it("returns the color in hex", function(done) {
         request(url, function(error, response, body) {
-          expect(body).to.equal("ffffff");
+          chai.expect(body).to.equal("ffffff");
           done();
         });
       });
-  
+ 
     });
   
     describe("Hex to RGB conversion", function() {
@@ -28,17 +33,17 @@ describe("Color Code Converter API", function() {
   
       it("returns status 200", function(done) {
         request(url, function(error, response, body) {
-          expect(response.statusCode).to.equal(200);
+          chai.expect(response.statusCode).to.equal(200);
           done();
         });
       });
   
       it("returns the color in RGB", function(done) {
         request(url, function(error, response, body) {
-          expect(body).to.equal("[0,255,0]");
+          chai.expect(body).to.equal("[0,255,0]");
           done();
         });
       });
     });
-  
+
   });

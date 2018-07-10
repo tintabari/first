@@ -7,7 +7,7 @@
     "test": "npm run test:unit && npm run test:web",
     "start": "node app/server.js",
     "test:unit": "./node_modules/.bin/mocha \"./test/unit/*.js\"",
-    "test:web": "./node_modules/.bin/mocha \"./test/server/*.js\"",
+    "test:web": "./node_modules/.bin/mocha \"./test/server/*.js\" --exit",
     "preinstall": "cp support/git/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push"
   },
   "repository": {
@@ -18,6 +18,7 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
     "mocha": "^5.2.0"
   },
   "dependencies": {
