@@ -2,7 +2,7 @@
 
 This repository is the pushbreaker example
 
-Gihub hook activated
+Gihub hook activated 
 
 feature-001 - set page backgound color to  #00aab4
 
